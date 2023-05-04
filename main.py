@@ -15,7 +15,7 @@ async def root():
     return {"message": "It's working!"}  #this get request isn't necessary and can be omitted completely. It's just a webpage that prints a message on the screen to show that it's working.
 
 class UserData(BaseModel):
-    prompt: str
+    prompt: str    #validates data types during the runtime.
 
 chat_history = [] #list to store the chat history for context. Can be replaced by a database
 #chat_history = [{"role": "system", "content": f"You are a clinical therapist"}] #uncomment this line if you wanna precondition chatgpt, e.g you want it to be a therapist.
